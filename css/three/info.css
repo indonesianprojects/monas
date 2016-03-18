@@ -1,0 +1,264 @@
+
+/*
+.scroll-up:hover{
+-webkit-animation:hoverColor infinite;
+-webkit-animation-play-state: paused | running;
+    background-color: #014a2a;
+}
+
+*/
+/* Customized CSS for jQuery UI: simple info button and box. */
+
+.scroll-up p {
+ /* Starting position */
+ -moz-transform:translateY(100%);
+ -webkit-transform:translateY(100%);	
+ transform:translateY(100%);
+ /* Apply animation to this element */	
+ -moz-animation: scroll-up 20s linear infinite;
+ -webkit-animation: scroll-up 20s linear infinite;
+ animation: scroll-up 20s linear infinite;
+}
+/* Move it (define the animation) */
+@-moz-keyframes scroll-up {
+ 0%   { -moz-transform: translateY(100%); }
+ 100% { -moz-transform: translateY(-100%); }
+}
+@-webkit-keyframes scroll-up {
+ 0%   { -webkit-transform: translateY(100%); }
+ 100% { -webkit-transform: translateY(-100%); }
+}
+@keyframes scroll-up {
+ 0%   { 
+ -moz-transform: translateY(100%); /* Browser bug fix */
+ -webkit-transform: translateY(100%); /* Browser bug fix */
+ transform: translateY(100%); 		
+ }
+ 100% { 
+ -moz-transform: translateY(-100%); /* Browser bug fix */
+ -webkit-transform: translateY(-100%); /* Browser bug fix */
+ transform: translateY(-100%); 
+ }
+}
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  width:auto;
+  padding:5px;
+}
+
+@-webkit-keyframes bounceInDown {
+  0%, 60%, 75%, 90%, 100% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -3000px, 0);
+    transform: translate3d(0, -3000px, 0);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 25px, 0);
+    transform: translate3d(0, 25px, 0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(0, -10px, 0);
+    transform: translate3d(0, -10px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0, 5px, 0);
+    transform: translate3d(0, 5px, 0);
+  }
+
+  100% {
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes bounceInDown {
+  0%, 60%, 75%, 90%, 100% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -3000px, 0);
+    -ms-transform: translate3d(0, -3000px, 0);
+    transform: translate3d(0, -3000px, 0);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 25px, 0);
+    -ms-transform: translate3d(0, 25px, 0);
+    transform: translate3d(0, 25px, 0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(0, -10px, 0);
+    -ms-transform: translate3d(0, -10px, 0);
+    transform: translate3d(0, -10px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0, 5px, 0);
+    -ms-transform: translate3d(0, 5px, 0);
+    transform: translate3d(0, 5px, 0);
+  }
+
+  100% {
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+  }
+}
+
+.bounceInDown {
+  -webkit-animation-name: bounceInDown;
+  animation-name: bounceInDown;
+}
+
+@-webkit-keyframes bounceInLeft {
+  0%, 60%, 75%, 90%, 100% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-3000px, 0, 0);
+    transform: translate3d(-3000px, 0, 0);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(25px, 0, 0);
+    transform: translate3d(25px, 0, 0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(5px, 0, 0);
+    transform: translate3d(5px, 0, 0);
+  }
+
+  100% {
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+/*---------------------------*/
+
+
+
+
+.ui-widget-content 
+{
+    font-size:12px;
+    font-family: georgia;
+}
+
+/* trim space around info button */
+.ui-button-text-only .ui-button-text 
+{  padding: 0px;  }
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default 
+{  border: 0px solid #000000;  }
+
+/* changing dialog close button */
+.ui-dialog-titlebar-close
+{
+	outline-width: 0px !important;
+	background-color: transparent !important;
+    background-image: url('../img/icon-close-16.png') !important;
+	background-repeat:no-repeat !important;
+}
+
+/* changing dialog close button */
+.ui-dialog-titlebar-close:hover,
+.ui-dialog-titlebar-close:focus 
+{
+    background-color: transparent !important;
+    background-image: url('../images/icon-close-16.png') !important;
+	background-repeat:no-repeat !important;
+}
+
+/* hide the default "x" close image */
+.ui-dialog-titlebar-close span 
+{  display:none !important;  }
+
+/* translucent background */
+.ui-dialog 
+{  
+	opacity: .90;  
+	width:600px !important;
+}
+
+
+/* dari index */
+            @font-face {
+                font-family: Ubuntu;
+                src: url('fonts/Ubuntu-Regular.ttf');
+            }
+            .bs-docs-masthead{
+                background-color: #6f5499;
+                background-image: linear-gradient(to bottom, #563d7c 0px, #6f5499 100%);
+                background-repeat: repeat-x;
+            }
+            .bs-docs-masthead{
+                padding: 0;
+            }
+            .bs-docs-masthead h1{
+                color: #fff;
+                font-size: 40px;
+                margin: 0;
+                padding: 34px 0;
+                text-align: center;
+            }
+            .bs-docs-masthead a:hover{
+                text-decoration: none;
+            }
+            .meritoo-logo a{
+                background-color: #fff;
+                border: 1px solid rgba(66, 139, 202, 0.4);
+                display: block;
+                font-family: Ubuntu;
+                padding: 22px 0;
+                text-align: center;
+            }
+            .meritoo-logo a,
+            .meritoo-logo a:hover,
+            .meritoo-logo a:focus{
+                text-decoration: none;
+            }
+            .meritoo-logo a img{
+                display: block;
+                margin: 0 auto;
+            }
+            .meritoo-logo a span{
+                color: #4e4b4b;
+                font-size: 18px;
+            }
+            .row-urls{
+                margin-top: 4px;
+            }
+            .row-urls .col-md-6{
+                text-align: center;
+            }
+            .row-urls .col-md-6 a{
+                font-size: 14px;
+            }
+/* dari index  */
